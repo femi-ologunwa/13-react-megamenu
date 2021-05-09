@@ -7,8 +7,30 @@ const Navbar = () => {
    const { openSidebar, openMegamenu, closeMegamenu } = useContext(AppContext);
 
    const displayMegamenu = (e) => {
-      console.log('hello world');
-      openMegamenu();
+      //get the menu item that was hovered upon, so that we can subsequently get the text and its coordinates (location x,y on page). The coordinates will help to properly position its sub megamenu under it.
+
+      //get the menu item
+      const menuLink = e.target;
+      console.log(menuLink);
+
+      //get the menu item text
+      const menuLinkText = e.target.textContent;
+      console.log(menuLinkText);
+
+      //get the coordinates of the menu item - The getBoundingClientRect() method returns the size of an element and its position relative to the viewport.
+      const menuLinkPageCoordinates = e.target.getBoundingClientRect();
+      console.log(menuLinkPageCoordinates);
+
+      //get the center of the menuLink so as to center align the container of its submegamenu with it.
+      const center =
+         (menuLinkPageCoordinates.left + menuLinkPageCoordinates.right) / 2;
+      console.log(center);
+
+      //get the bottom coord of the menuLink so as to position the container of its submegamenu properly from the bottom. We will push up the submenu container by 3px
+      const bottom = menuLinkPageCoordinates.bottom - 3;
+      console.log(bottom);
+
+      openMegamenu(menuLinkText, { center, bottom });
    };
 
    return (
