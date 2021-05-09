@@ -1,11 +1,15 @@
 import React, { useState, createContext } from 'react';
+import sublinks from './data';
 
 const AppContext = createContext();
 
 const AppProvider = (props) => {
    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-   const [isMegamenuOpen, setIsMegamenuOpen] = useState(true);
+   const [isMegamenuOpen, setIsMegamenuOpen] = useState(false);
    const [location, setLocation] = useState({});
+
+   //state to hold main-menu/page and the links that forms its submegamenu
+   const [page, setPage] = useState({ page: '', links: [] });
 
    const openSidebar = () => {
       setIsSidebarOpen(true);
@@ -16,6 +20,8 @@ const AppProvider = (props) => {
    };
 
    const openMegamenu = (text, coordinates) => {
+      const page = sublinks.find((link) => link.page === text);
+      setPage(page);
       setLocation(coordinates);
       setIsMegamenuOpen(true);
    };
@@ -34,6 +40,7 @@ const AppProvider = (props) => {
             closeMegamenu,
             closeSidebar,
             location,
+            page,
          }}
       >
          {props.children}

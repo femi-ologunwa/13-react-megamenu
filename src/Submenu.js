@@ -2,7 +2,11 @@ import React, { useContext, useEffect, useRef } from 'react';
 import { AppContext } from './context';
 
 const Submenu = () => {
-   const { isMegamenuOpen, location } = useContext(AppContext);
+   const {
+      isMegamenuOpen,
+      location,
+      page: { page, links },
+   } = useContext(AppContext);
 
    //setup useRef to target the submegamenu container so as to add some styling to it.
    const container = useRef(null);
@@ -19,7 +23,18 @@ const Submenu = () => {
          className={`${isMegamenuOpen ? 'submenu show' : 'submenu'}`}
          ref={container}
       >
-         submenu
+         <h4>{page}</h4>
+         <div className={`submenu-center col-2`}>
+            {links.map((link, index) => {
+               const { label, icon, url } = link;
+               return (
+                  <a key={index} href={url}>
+                     {icon}
+                     {label}
+                  </a>
+               );
+            })}
+         </div>
       </aside>
    );
 };
