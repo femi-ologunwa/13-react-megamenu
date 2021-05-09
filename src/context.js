@@ -3,7 +3,7 @@ import React, { useState, createContext } from 'react';
 const AppContext = createContext();
 
 const AppProvider = (props) => {
-   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
    const [isMegamenuOpen, setIsMegamenuOpen] = useState(true);
 
    const openSidebar = () => {
@@ -11,7 +11,7 @@ const AppProvider = (props) => {
    };
 
    const closeSidebar = () => {
-      setIsMegamenuOpen(false);
+      setIsSidebarOpen(false);
    };
 
    const openMegamenu = () => {
