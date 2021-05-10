@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/13-react-megamenu/static/css/main.09a9789c.chunk.css",
+    "main.js": "/13-react-megamenu/static/js/main.dfe20533.chunk.js",
+    "main.js.map": "/13-react-megamenu/static/js/main.dfe20533.chunk.js.map",
+    "runtime-main.js": "/13-react-megamenu/static/js/runtime-main.ef7d5454.js",
+    "runtime-main.js.map": "/13-react-megamenu/static/js/runtime-main.ef7d5454.js.map",
+    "static/js/2.45f9593c.chunk.js": "/13-react-megamenu/static/js/2.45f9593c.chunk.js",
+    "static/js/2.45f9593c.chunk.js.map": "/13-react-megamenu/static/js/2.45f9593c.chunk.js.map",
+    "index.html": "/13-react-megamenu/index.html",
+    "precache-manifest.f48c8be60cdac53d1f17a2138d80271b.js": "/13-react-megamenu/precache-manifest.f48c8be60cdac53d1f17a2138d80271b.js",
+    "service-worker.js": "/13-react-megamenu/service-worker.js",
+    "static/css/main.09a9789c.chunk.css.map": "/13-react-megamenu/static/css/main.09a9789c.chunk.css.map",
+    "static/js/2.45f9593c.chunk.js.LICENSE.txt": "/13-react-megamenu/static/js/2.45f9593c.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/13-react-megamenu/static/media/hero.8596ab4a.svg",
+    "static/media/logo.svg": "/13-react-megamenu/static/media/logo.1090473d.svg",
+    "static/media/phone.svg": "/13-react-megamenu/static/media/phone.58d7e3d6.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ef7d5454.js",
+    "static/js/2.45f9593c.chunk.js",
+    "static/css/main.09a9789c.chunk.css",
+    "static/js/main.dfe20533.chunk.js"
+  ]
+}
