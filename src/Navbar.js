@@ -33,8 +33,14 @@ const Navbar = () => {
       openMegamenu(menuLinkText, { center, bottom });
    };
 
+   const handleMegamenu = (e) => {
+      if (!e.target.classList.contains('link-btn')) {
+         closeMegamenu();
+      }
+   };
+
    return (
-      <nav className='nav'>
+      <nav className='nav' onMouseOver={handleMegamenu}>
          <div className='nav-center'>
             <div className='nav-header'>
                <img src={logo} alt='stripe' className='nav-logo' />

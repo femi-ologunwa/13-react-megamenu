@@ -6,7 +6,7 @@ const Hero = () => {
    const { closeMegamenu } = useContext(AppContext);
 
    return (
-      <section className='hero'>
+      <section className='hero' onMouseOver={closeMegamenu}>
          <div className='hero-center'>
             <article className='hero-info'>
                <h1>payment infrastructure for the internet</h1>
